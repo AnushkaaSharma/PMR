@@ -4,6 +4,7 @@ contract EMRContract {
 
   enum SexType { MALE, FEMALE }
   enum MaritalType { single, married, remarried, separated, divorced, widowed }
+  enum AppointmentStat { CREATED, APPROVED, REJECTED, BILLING, CLOSE }
 
   struct Patient {
     address client;
@@ -14,7 +15,17 @@ contract EMRContract {
     string email;
     uint256[] medicalreport;
   }
+
+  struct Appointment{
+    uint256 index;
+    address patient;
+    uint256 datetime;
+    AppointmentStat stat;
+    string remark;
+  }
+
 mapping(address => Patient) public patients;
+mapping(uint256 => Appointment) public appointments;
 
 
 }

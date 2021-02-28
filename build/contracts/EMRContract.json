@@ -5,6 +5,47 @@
       "constant": true,
       "inputs": [
         {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "appointments",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "patient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "datetime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum EMRContract.AppointmentStat",
+          "name": "stat",
+          "type": "uint8"
+        },
+        {
+          "internalType": "string",
+          "name": "remark",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
           "internalType": "address",
           "name": "",
           "type": "address"
@@ -48,21 +89,21 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"patients\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"client\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"fullname\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"dob\",\"type\":\"string\"},{\"internalType\":\"enum EMRContract.SexType\",\"name\":\"sex\",\"type\":\"uint8\"},{\"internalType\":\"enum EMRContract.MaritalType\",\"name\":\"marital\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/sanus/final-major-project/contracts/EMRContract.sol\":\"EMRContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/sanus/final-major-project/contracts/EMRContract.sol\":{\"keccak256\":\"0x09972d94e4cf8123e80edf23534a1d45f81654e020a2a52500c0c7b4fa629e51\",\"urls\":[\"bzz-raw://8c52162bfee22a0968d241981a395baeb652389e338e27be870ce97a114d981b\",\"dweb:/ipfs/QmNjx9VetYexfMpkgJProoQUDdzdynw2DSzbH35PsZbDtm\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b50610495806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80630869cfbc14610030575b600080fd5b6100726004803603602081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610222565b604051808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001806020018660018111156100bc57fe5b60ff1681526020018560058111156100d057fe5b60ff16815260200180602001848103845289818151815260200191508051906020019080838360005b838110156101145780820151818401526020810190506100f9565b50505050905090810190601f1680156101415780820380516001836020036101000a031916815260200191505b50848103835288818151815260200191508051906020019080838360005b8381101561017a57808201518184015260208101905061015f565b50505050905090810190601f1680156101a75780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156101e05780820151818401526020810190506101c5565b50505050905090810190601f16801561020d5780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b60006020528060005260406000206000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102f45780601f106102c9576101008083540402835291602001916102f4565b820191906000526020600020905b8154815290600101906020018083116102d757829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103925780601f1061036757610100808354040283529160200191610392565b820191906000526020600020905b81548152906001019060200180831161037557829003601f168201915b5050505050908060030160009054906101000a900460ff16908060030160019054906101000a900460ff1690806004018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104565780601f1061042b57610100808354040283529160200191610456565b820191906000526020600020905b81548152906001019060200180831161043957829003601f168201915b505050505090508656fea265627a7a723158201ea28daba085c85231e82ea9069de6ea7c99e2493df2513f1588af7ca6c4d1de64736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80630869cfbc14610030575b600080fd5b6100726004803603602081101561004657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610222565b604051808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001806020018660018111156100bc57fe5b60ff1681526020018560058111156100d057fe5b60ff16815260200180602001848103845289818151815260200191508051906020019080838360005b838110156101145780820151818401526020810190506100f9565b50505050905090810190601f1680156101415780820380516001836020036101000a031916815260200191505b50848103835288818151815260200191508051906020019080838360005b8381101561017a57808201518184015260208101905061015f565b50505050905090810190601f1680156101a75780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156101e05780820151818401526020810190506101c5565b50505050905090810190601f16801561020d5780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b60006020528060005260406000206000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102f45780601f106102c9576101008083540402835291602001916102f4565b820191906000526020600020905b8154815290600101906020018083116102d757829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103925780601f1061036757610100808354040283529160200191610392565b820191906000526020600020905b81548152906001019060200180831161037557829003601f168201915b5050505050908060030160009054906101000a900460ff16908060030160019054906101000a900460ff1690806004018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104565780601f1061042b57610100808354040283529160200191610456565b820191906000526020600020905b81548152906001019060200180831161043957829003601f168201915b505050505090508656fea265627a7a723158201ea28daba085c85231e82ea9069de6ea7c99e2493df2513f1588af7ca6c4d1de64736f6c63430005100032",
-  "sourceMap": "64:371:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:371:0;;;;;;;",
-  "deployedSourceMap": "64:371:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:371:0;;;;;;;;;;;;;;;;;;;384:43;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;384:43:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;384:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;384:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;384:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "//SPDX-License-Identifier:MIT\r\npragma solidity >=0.5.16<0.8.0;\r\ncontract EMRContract {\r\n\r\n  enum SexType { MALE, FEMALE }\r\n  enum MaritalType { single, married, remarried, separated, divorced, widowed }\r\n\r\n  struct Patient {\r\n    address client;\r\n    string fullname;\r\n    string dob;\r\n    SexType sex;\r\n    MaritalType marital;\r\n    string email;\r\n    uint256[] medicalreport;\r\n  }\r\nmapping(address => Patient) public patients;\r\n\r\n\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"appointments\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"patient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"datetime\",\"type\":\"uint256\"},{\"internalType\":\"enum EMRContract.AppointmentStat\",\"name\":\"stat\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"remark\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"patients\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"client\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"fullname\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"dob\",\"type\":\"string\"},{\"internalType\":\"enum EMRContract.SexType\",\"name\":\"sex\",\"type\":\"uint8\"},{\"internalType\":\"enum EMRContract.MaritalType\",\"name\":\"marital\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"email\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/sanus/final-major-project/contracts/EMRContract.sol\":\"EMRContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/sanus/final-major-project/contracts/EMRContract.sol\":{\"keccak256\":\"0x99878801419f61b214b38a8d2b1b1d28ccc1202b8a9daf1d641bb5b981741223\",\"urls\":[\"bzz-raw://a39e535b1ebba0e2ffe7e839f8d967b45805a91579c11985f1cd8d3e795a4aab\",\"dweb:/ipfs/QmbH81m7S5c3ARNCmxvvRwgXzismvX2tocDuTSt7A2EQXs\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610698806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80630869cfbc1461003b57806312dc90131461022d575b600080fd5b61007d6004803603602081101561005157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061032a565b604051808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001806020018660018111156100c757fe5b60ff1681526020018560058111156100db57fe5b60ff16815260200180602001848103845289818151815260200191508051906020019080838360005b8381101561011f578082015181840152602081019050610104565b50505050905090810190601f16801561014c5780820380516001836020036101000a031916815260200191505b50848103835288818151815260200191508051906020019080838360005b8381101561018557808201518184015260208101905061016a565b50505050905090810190601f1680156101b25780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156101eb5780820151818401526020810190506101d0565b50505050905090810190601f1680156102185780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b6102596004803603602081101561024357600080fd5b8101908080359060200190929190505050610568565b604051808681526020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018481526020018360048111156102a757fe5b60ff16815260200180602001828103825283818151815260200191508051906020019080838360005b838110156102eb5780820151818401526020810190506102d0565b50505050905090810190601f1680156103185780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b60006020528060005260406000206000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103fc5780601f106103d1576101008083540402835291602001916103fc565b820191906000526020600020905b8154815290600101906020018083116103df57829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561049a5780601f1061046f5761010080835404028352916020019161049a565b820191906000526020600020905b81548152906001019060200180831161047d57829003601f168201915b5050505050908060030160009054906101000a900460ff16908060030160019054906101000a900460ff1690806004018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561055e5780601f106105335761010080835404028352916020019161055e565b820191906000526020600020905b81548152906001019060200180831161054157829003601f168201915b5050505050905086565b60016020528060005260406000206000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020154908060030160009054906101000a900460ff1690806004018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106595780601f1061062e57610100808354040283529160200191610659565b820191906000526020600020905b81548152906001019060200180831161063c57829003601f168201915b505050505090508556fea265627a7a72315820a18e0ce7e904ad6b7e30c4635dbc893c045c8682ec39823722a74c31f761be5e64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80630869cfbc1461003b57806312dc90131461022d575b600080fd5b61007d6004803603602081101561005157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061032a565b604051808773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001806020018660018111156100c757fe5b60ff1681526020018560058111156100db57fe5b60ff16815260200180602001848103845289818151815260200191508051906020019080838360005b8381101561011f578082015181840152602081019050610104565b50505050905090810190601f16801561014c5780820380516001836020036101000a031916815260200191505b50848103835288818151815260200191508051906020019080838360005b8381101561018557808201518184015260208101905061016a565b50505050905090810190601f1680156101b25780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156101eb5780820151818401526020810190506101d0565b50505050905090810190601f1680156102185780820380516001836020036101000a031916815260200191505b50995050505050505050505060405180910390f35b6102596004803603602081101561024357600080fd5b8101908080359060200190929190505050610568565b604051808681526020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018481526020018360048111156102a757fe5b60ff16815260200180602001828103825283818151815260200191508051906020019080838360005b838110156102eb5780820151818401526020810190506102d0565b50505050905090810190601f1680156103185780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390f35b60006020528060005260406000206000915090508060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103fc5780601f106103d1576101008083540402835291602001916103fc565b820191906000526020600020905b8154815290600101906020018083116103df57829003601f168201915b505050505090806002018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561049a5780601f1061046f5761010080835404028352916020019161049a565b820191906000526020600020905b81548152906001019060200180831161047d57829003601f168201915b5050505050908060030160009054906101000a900460ff16908060030160019054906101000a900460ff1690806004018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561055e5780601f106105335761010080835404028352916020019161055e565b820191906000526020600020905b81548152906001019060200180831161054157829003601f168201915b5050505050905086565b60016020528060005260406000206000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020154908060030160009054906101000a900460ff1690806004018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106595780601f1061062e57610100808354040283529160200191610659565b820191906000526020600020905b81548152906001019060200180831161063c57829003601f168201915b505050505090508556fea265627a7a72315820a18e0ce7e904ad6b7e30c4635dbc893c045c8682ec39823722a74c31f761be5e64736f6c63430005100032",
+  "sourceMap": "64:641:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:641:0;;;;;;;",
+  "deployedSourceMap": "64:641:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:641:0;;;;;;;;;;;;;;;;;;;;;;;;600:43;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;600:43:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;600:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;600:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;600:43:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;646:51;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;646:51:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;646:51:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;600:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;646:51::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "//SPDX-License-Identifier:MIT\r\npragma solidity >=0.5.16<0.8.0;\r\ncontract EMRContract {\r\n\r\n  enum SexType { MALE, FEMALE }\r\n  enum MaritalType { single, married, remarried, separated, divorced, widowed }\r\n  enum AppointmentStat { CREATED, APPROVED, REJECTED, BILLING, CLOSE }\r\n\r\n  struct Patient {\r\n    address client;\r\n    string fullname;\r\n    string dob;\r\n    SexType sex;\r\n    MaritalType marital;\r\n    string email;\r\n    uint256[] medicalreport;\r\n  }\r\n\r\n  struct Appointment{\r\n    uint256 index;\r\n    address patient;\r\n    uint256 datetime;\r\n    AppointmentStat stat;\r\n    string remark;\r\n  }\r\n\r\nmapping(address => Patient) public patients;\r\nmapping(uint256 => Appointment) public appointments;\r\n\r\n\r\n}",
   "sourcePath": "C:/Users/sanus/final-major-project/contracts/EMRContract.sol",
   "ast": {
     "absolutePath": "/C/Users/sanus/final-major-project/contracts/EMRContract.sol",
     "exportedSymbols": {
       "EMRContract": [
-        32
+        53
       ]
     },
-    "id": 33,
+    "id": 54,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -85,9 +126,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 32,
+        "id": 53,
         "linearizedBaseContracts": [
-          32
+          53
         ],
         "name": "EMRContract",
         "nodeType": "ContractDefinition",
@@ -159,16 +200,55 @@
             "src": "125:77:0"
           },
           {
+            "canonicalName": "EMRContract.AppointmentStat",
+            "id": 17,
+            "members": [
+              {
+                "id": 12,
+                "name": "CREATED",
+                "nodeType": "EnumValue",
+                "src": "229:7:0"
+              },
+              {
+                "id": 13,
+                "name": "APPROVED",
+                "nodeType": "EnumValue",
+                "src": "238:8:0"
+              },
+              {
+                "id": 14,
+                "name": "REJECTED",
+                "nodeType": "EnumValue",
+                "src": "248:8:0"
+              },
+              {
+                "id": 15,
+                "name": "BILLING",
+                "nodeType": "EnumValue",
+                "src": "258:7:0"
+              },
+              {
+                "id": 16,
+                "name": "CLOSE",
+                "nodeType": "EnumValue",
+                "src": "267:5:0"
+              }
+            ],
+            "name": "AppointmentStat",
+            "nodeType": "EnumDefinition",
+            "src": "206:68:0"
+          },
+          {
             "canonicalName": "EMRContract.Patient",
-            "id": 27,
+            "id": 33,
             "members": [
               {
                 "constant": false,
-                "id": 13,
+                "id": 19,
                 "name": "client",
                 "nodeType": "VariableDeclaration",
-                "scope": 27,
-                "src": "230:14:0",
+                "scope": 33,
+                "src": "302:14:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -176,10 +256,10 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 12,
+                  "id": 18,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
-                  "src": "230:7:0",
+                  "src": "302:7:0",
                   "stateMutability": "nonpayable",
                   "typeDescriptions": {
                     "typeIdentifier": "t_address",
@@ -191,11 +271,11 @@
               },
               {
                 "constant": false,
-                "id": 15,
+                "id": 21,
                 "name": "fullname",
                 "nodeType": "VariableDeclaration",
-                "scope": 27,
-                "src": "251:15:0",
+                "scope": 33,
+                "src": "323:15:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -203,95 +283,13 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 14,
-                  "name": "string",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "251:6:0",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 17,
-                "name": "dob",
-                "nodeType": "VariableDeclaration",
-                "scope": 27,
-                "src": "273:10:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
-                },
-                "typeName": {
-                  "id": 16,
-                  "name": "string",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "273:6:0",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 19,
-                "name": "sex",
-                "nodeType": "VariableDeclaration",
-                "scope": 27,
-                "src": "290:11:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_SexType_$4",
-                  "typeString": "enum EMRContract.SexType"
-                },
-                "typeName": {
-                  "contractScope": null,
-                  "id": 18,
-                  "name": "SexType",
-                  "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 4,
-                  "src": "290:7:0",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_SexType_$4",
-                    "typeString": "enum EMRContract.SexType"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
-              },
-              {
-                "constant": false,
-                "id": 21,
-                "name": "marital",
-                "nodeType": "VariableDeclaration",
-                "scope": 27,
-                "src": "308:19:0",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_MaritalType_$11",
-                  "typeString": "enum EMRContract.MaritalType"
-                },
-                "typeName": {
-                  "contractScope": null,
                   "id": 20,
-                  "name": "MaritalType",
-                  "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 11,
-                  "src": "308:11:0",
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "323:6:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_MaritalType_$11",
-                    "typeString": "enum EMRContract.MaritalType"
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
                   }
                 },
                 "value": null,
@@ -300,10 +298,10 @@
               {
                 "constant": false,
                 "id": 23,
-                "name": "email",
+                "name": "dob",
                 "nodeType": "VariableDeclaration",
-                "scope": 27,
-                "src": "334:12:0",
+                "scope": 33,
+                "src": "345:10:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -314,7 +312,7 @@
                   "id": 22,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "334:6:0",
+                  "src": "345:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -325,11 +323,93 @@
               },
               {
                 "constant": false,
-                "id": 26,
+                "id": 25,
+                "name": "sex",
+                "nodeType": "VariableDeclaration",
+                "scope": 33,
+                "src": "362:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_SexType_$4",
+                  "typeString": "enum EMRContract.SexType"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 24,
+                  "name": "SexType",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 4,
+                  "src": "362:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_SexType_$4",
+                    "typeString": "enum EMRContract.SexType"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 27,
+                "name": "marital",
+                "nodeType": "VariableDeclaration",
+                "scope": 33,
+                "src": "380:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_MaritalType_$11",
+                  "typeString": "enum EMRContract.MaritalType"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 26,
+                  "name": "MaritalType",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 11,
+                  "src": "380:11:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_MaritalType_$11",
+                    "typeString": "enum EMRContract.MaritalType"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 29,
+                "name": "email",
+                "nodeType": "VariableDeclaration",
+                "scope": 33,
+                "src": "406:12:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 28,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "406:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 32,
                 "name": "medicalreport",
                 "nodeType": "VariableDeclaration",
-                "scope": 27,
-                "src": "353:23:0",
+                "scope": 33,
+                "src": "425:23:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -338,19 +418,19 @@
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 24,
+                    "id": 30,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "353:7:0",
+                    "src": "425:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 25,
+                  "id": 31,
                   "length": null,
                   "nodeType": "ArrayTypeName",
-                  "src": "353:9:0",
+                  "src": "425:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                     "typeString": "uint256[]"
@@ -362,51 +442,242 @@
             ],
             "name": "Patient",
             "nodeType": "StructDefinition",
-            "scope": 32,
-            "src": "208:174:0",
+            "scope": 53,
+            "src": "280:174:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "EMRContract.Appointment",
+            "id": 44,
+            "members": [
+              {
+                "constant": false,
+                "id": 35,
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "scope": 44,
+                "src": "485:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 34,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "485:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 37,
+                "name": "patient",
+                "nodeType": "VariableDeclaration",
+                "scope": 44,
+                "src": "505:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 36,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "505:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 39,
+                "name": "datetime",
+                "nodeType": "VariableDeclaration",
+                "scope": 44,
+                "src": "527:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 38,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "527:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 41,
+                "name": "stat",
+                "nodeType": "VariableDeclaration",
+                "scope": 44,
+                "src": "550:20:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_AppointmentStat_$17",
+                  "typeString": "enum EMRContract.AppointmentStat"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 40,
+                  "name": "AppointmentStat",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 17,
+                  "src": "550:15:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_AppointmentStat_$17",
+                    "typeString": "enum EMRContract.AppointmentStat"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 43,
+                "name": "remark",
+                "nodeType": "VariableDeclaration",
+                "scope": 44,
+                "src": "577:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 42,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "577:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Appointment",
+            "nodeType": "StructDefinition",
+            "scope": 53,
+            "src": "460:136:0",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 31,
+            "id": 48,
             "name": "patients",
             "nodeType": "VariableDeclaration",
-            "scope": 32,
-            "src": "384:43:0",
+            "scope": 53,
+            "src": "600:43:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$27_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$33_storage_$",
               "typeString": "mapping(address => struct EMRContract.Patient)"
             },
             "typeName": {
-              "id": 30,
+              "id": 47,
               "keyType": {
-                "id": 28,
+                "id": 45,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "392:7:0",
+                "src": "608:7:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "384:27:0",
+              "src": "600:27:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$27_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$33_storage_$",
                 "typeString": "mapping(address => struct EMRContract.Patient)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 29,
+                "id": 46,
                 "name": "Patient",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 27,
-                "src": "403:7:0",
+                "referencedDeclaration": 33,
+                "src": "619:7:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Patient_$27_storage_ptr",
+                  "typeIdentifier": "t_struct$_Patient_$33_storage_ptr",
                   "typeString": "struct EMRContract.Patient"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 52,
+            "name": "appointments",
+            "nodeType": "VariableDeclaration",
+            "scope": 53,
+            "src": "646:51:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Appointment_$44_storage_$",
+              "typeString": "mapping(uint256 => struct EMRContract.Appointment)"
+            },
+            "typeName": {
+              "id": 51,
+              "keyType": {
+                "id": 49,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "654:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "646:31:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Appointment_$44_storage_$",
+                "typeString": "mapping(uint256 => struct EMRContract.Appointment)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 50,
+                "name": "Appointment",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 44,
+                "src": "665:11:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Appointment_$44_storage_ptr",
+                  "typeString": "struct EMRContract.Appointment"
                 }
               }
             },
@@ -414,18 +685,18 @@
             "visibility": "public"
           }
         ],
-        "scope": 33,
-        "src": "64:371:0"
+        "scope": 54,
+        "src": "64:641:0"
       }
     ],
-    "src": "31:404:0"
+    "src": "31:674:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/C/Users/sanus/final-major-project/contracts/EMRContract.sol",
       "exportedSymbols": {
         "EMRContract": [
-          32
+          53
         ]
       }
     },
@@ -458,10 +729,10 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            32
+            53
           ],
           "name": "EMRContract",
-          "scope": 33
+          "scope": 54
         },
         "children": [
           {
@@ -552,9 +823,60 @@
           },
           {
             "attributes": {
+              "canonicalName": "EMRContract.AppointmentStat",
+              "name": "AppointmentStat"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "CREATED"
+                },
+                "id": 12,
+                "name": "EnumValue",
+                "src": "229:7:0"
+              },
+              {
+                "attributes": {
+                  "name": "APPROVED"
+                },
+                "id": 13,
+                "name": "EnumValue",
+                "src": "238:8:0"
+              },
+              {
+                "attributes": {
+                  "name": "REJECTED"
+                },
+                "id": 14,
+                "name": "EnumValue",
+                "src": "248:8:0"
+              },
+              {
+                "attributes": {
+                  "name": "BILLING"
+                },
+                "id": 15,
+                "name": "EnumValue",
+                "src": "258:7:0"
+              },
+              {
+                "attributes": {
+                  "name": "CLOSE"
+                },
+                "id": 16,
+                "name": "EnumValue",
+                "src": "267:5:0"
+              }
+            ],
+            "id": 17,
+            "name": "EnumDefinition",
+            "src": "206:68:0"
+          },
+          {
+            "attributes": {
               "canonicalName": "EMRContract.Patient",
               "name": "Patient",
-              "scope": 32,
+              "scope": 53,
               "visibility": "public"
             },
             "children": [
@@ -562,7 +884,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "client",
-                  "scope": 27,
+                  "scope": 33,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "address",
@@ -576,20 +898,20 @@
                       "stateMutability": "nonpayable",
                       "type": "address"
                     },
-                    "id": 12,
+                    "id": 18,
                     "name": "ElementaryTypeName",
-                    "src": "230:7:0"
+                    "src": "302:7:0"
                   }
                 ],
-                "id": 13,
+                "id": 19,
                 "name": "VariableDeclaration",
-                "src": "230:14:0"
+                "src": "302:14:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "fullname",
-                  "scope": 27,
+                  "scope": 33,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -602,102 +924,20 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 14,
+                    "id": 20,
                     "name": "ElementaryTypeName",
-                    "src": "251:6:0"
+                    "src": "323:6:0"
                   }
                 ],
-                "id": 15,
+                "id": 21,
                 "name": "VariableDeclaration",
-                "src": "251:15:0"
+                "src": "323:15:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "dob",
-                  "scope": 27,
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "type": "string",
-                  "value": null,
-                  "visibility": "internal"
-                },
-                "children": [
-                  {
-                    "attributes": {
-                      "name": "string",
-                      "type": "string"
-                    },
-                    "id": 16,
-                    "name": "ElementaryTypeName",
-                    "src": "273:6:0"
-                  }
-                ],
-                "id": 17,
-                "name": "VariableDeclaration",
-                "src": "273:10:0"
-              },
-              {
-                "attributes": {
-                  "constant": false,
-                  "name": "sex",
-                  "scope": 27,
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "type": "enum EMRContract.SexType",
-                  "value": null,
-                  "visibility": "internal"
-                },
-                "children": [
-                  {
-                    "attributes": {
-                      "contractScope": null,
-                      "name": "SexType",
-                      "referencedDeclaration": 4,
-                      "type": "enum EMRContract.SexType"
-                    },
-                    "id": 18,
-                    "name": "UserDefinedTypeName",
-                    "src": "290:7:0"
-                  }
-                ],
-                "id": 19,
-                "name": "VariableDeclaration",
-                "src": "290:11:0"
-              },
-              {
-                "attributes": {
-                  "constant": false,
-                  "name": "marital",
-                  "scope": 27,
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "type": "enum EMRContract.MaritalType",
-                  "value": null,
-                  "visibility": "internal"
-                },
-                "children": [
-                  {
-                    "attributes": {
-                      "contractScope": null,
-                      "name": "MaritalType",
-                      "referencedDeclaration": 11,
-                      "type": "enum EMRContract.MaritalType"
-                    },
-                    "id": 20,
-                    "name": "UserDefinedTypeName",
-                    "src": "308:11:0"
-                  }
-                ],
-                "id": 21,
-                "name": "VariableDeclaration",
-                "src": "308:19:0"
-              },
-              {
-                "attributes": {
-                  "constant": false,
-                  "name": "email",
-                  "scope": 27,
+                  "scope": 33,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -712,18 +952,100 @@
                     },
                     "id": 22,
                     "name": "ElementaryTypeName",
-                    "src": "334:6:0"
+                    "src": "345:6:0"
                   }
                 ],
                 "id": 23,
                 "name": "VariableDeclaration",
-                "src": "334:12:0"
+                "src": "345:10:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "sex",
+                  "scope": 33,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum EMRContract.SexType",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "SexType",
+                      "referencedDeclaration": 4,
+                      "type": "enum EMRContract.SexType"
+                    },
+                    "id": 24,
+                    "name": "UserDefinedTypeName",
+                    "src": "362:7:0"
+                  }
+                ],
+                "id": 25,
+                "name": "VariableDeclaration",
+                "src": "362:11:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "marital",
+                  "scope": 33,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum EMRContract.MaritalType",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "MaritalType",
+                      "referencedDeclaration": 11,
+                      "type": "enum EMRContract.MaritalType"
+                    },
+                    "id": 26,
+                    "name": "UserDefinedTypeName",
+                    "src": "380:11:0"
+                  }
+                ],
+                "id": 27,
+                "name": "VariableDeclaration",
+                "src": "380:19:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "email",
+                  "scope": 33,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 28,
+                    "name": "ElementaryTypeName",
+                    "src": "406:6:0"
+                  }
+                ],
+                "id": 29,
+                "name": "VariableDeclaration",
+                "src": "406:12:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "medicalreport",
-                  "scope": 27,
+                  "scope": 33,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256[]",
@@ -742,30 +1064,176 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 24,
+                        "id": 30,
                         "name": "ElementaryTypeName",
-                        "src": "353:7:0"
+                        "src": "425:7:0"
                       }
                     ],
-                    "id": 25,
+                    "id": 31,
                     "name": "ArrayTypeName",
-                    "src": "353:9:0"
+                    "src": "425:9:0"
                   }
                 ],
-                "id": 26,
+                "id": 32,
                 "name": "VariableDeclaration",
-                "src": "353:23:0"
+                "src": "425:23:0"
               }
             ],
-            "id": 27,
+            "id": 33,
             "name": "StructDefinition",
-            "src": "208:174:0"
+            "src": "280:174:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "EMRContract.Appointment",
+              "name": "Appointment",
+              "scope": 53,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "index",
+                  "scope": 44,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 34,
+                    "name": "ElementaryTypeName",
+                    "src": "485:7:0"
+                  }
+                ],
+                "id": 35,
+                "name": "VariableDeclaration",
+                "src": "485:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "patient",
+                  "scope": 44,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 36,
+                    "name": "ElementaryTypeName",
+                    "src": "505:7:0"
+                  }
+                ],
+                "id": 37,
+                "name": "VariableDeclaration",
+                "src": "505:15:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "datetime",
+                  "scope": 44,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 38,
+                    "name": "ElementaryTypeName",
+                    "src": "527:7:0"
+                  }
+                ],
+                "id": 39,
+                "name": "VariableDeclaration",
+                "src": "527:16:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "stat",
+                  "scope": 44,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum EMRContract.AppointmentStat",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "AppointmentStat",
+                      "referencedDeclaration": 17,
+                      "type": "enum EMRContract.AppointmentStat"
+                    },
+                    "id": 40,
+                    "name": "UserDefinedTypeName",
+                    "src": "550:15:0"
+                  }
+                ],
+                "id": 41,
+                "name": "VariableDeclaration",
+                "src": "550:20:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "remark",
+                  "scope": 44,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 42,
+                    "name": "ElementaryTypeName",
+                    "src": "577:6:0"
+                  }
+                ],
+                "id": 43,
+                "name": "VariableDeclaration",
+                "src": "577:13:0"
+              }
+            ],
+            "id": 44,
+            "name": "StructDefinition",
+            "src": "460:136:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "patients",
-              "scope": 32,
+              "scope": 53,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(address => struct EMRContract.Patient)",
@@ -783,40 +1251,87 @@
                       "name": "address",
                       "type": "address"
                     },
-                    "id": 28,
+                    "id": 45,
                     "name": "ElementaryTypeName",
-                    "src": "392:7:0"
+                    "src": "608:7:0"
                   },
                   {
                     "attributes": {
                       "contractScope": null,
                       "name": "Patient",
-                      "referencedDeclaration": 27,
+                      "referencedDeclaration": 33,
                       "type": "struct EMRContract.Patient"
                     },
-                    "id": 29,
+                    "id": 46,
                     "name": "UserDefinedTypeName",
-                    "src": "403:7:0"
+                    "src": "619:7:0"
                   }
                 ],
-                "id": 30,
+                "id": 47,
                 "name": "Mapping",
-                "src": "384:27:0"
+                "src": "600:27:0"
               }
             ],
-            "id": 31,
+            "id": 48,
             "name": "VariableDeclaration",
-            "src": "384:43:0"
+            "src": "600:43:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "appointments",
+              "scope": 53,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct EMRContract.Appointment)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct EMRContract.Appointment)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 49,
+                    "name": "ElementaryTypeName",
+                    "src": "654:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Appointment",
+                      "referencedDeclaration": 44,
+                      "type": "struct EMRContract.Appointment"
+                    },
+                    "id": 50,
+                    "name": "UserDefinedTypeName",
+                    "src": "665:11:0"
+                  }
+                ],
+                "id": 51,
+                "name": "Mapping",
+                "src": "646:31:0"
+              }
+            ],
+            "id": 52,
+            "name": "VariableDeclaration",
+            "src": "646:51:0"
           }
         ],
-        "id": 32,
+        "id": 53,
         "name": "ContractDefinition",
-        "src": "64:371:0"
+        "src": "64:641:0"
       }
     ],
-    "id": 33,
+    "id": 54,
     "name": "SourceUnit",
-    "src": "31:404:0"
+    "src": "31:674:0"
   },
   "compiler": {
     "name": "solc",
@@ -865,12 +1380,12 @@
         }
       },
       "links": {},
-      "address": "0x0E91EAa42792119D30a48415385528100DDbcF82",
-      "transactionHash": "0xd7c278b181cada1a8e81314cc2174e643d7f5a8c4fcaed20d2affc2e109dee61"
+      "address": "0xd6Fc4D637a4560067C0a5aB0026EBE9bED21c6a2",
+      "transactionHash": "0xc35681a9b401155f5b7d42357884cce1fc1a26497a82655d7743a4be952353f8"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-02-28T10:13:46.091Z",
+  "updatedAt": "2021-02-28T12:03:47.707Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
