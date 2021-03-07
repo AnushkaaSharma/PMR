@@ -2,12 +2,12 @@
 
 Blockchain based system for storing medical records.
 
-Install dependencies
+Install dependencies: 
 npm install
 
 Add truffle-config.js to ganache workspace
 
-Starting lite server
+Starting lite server: 
 npm run dev 
 
 Import account to metamask wallet
